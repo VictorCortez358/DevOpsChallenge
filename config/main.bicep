@@ -1,6 +1,6 @@
 @minLength(3)
 @maxLength(11)
-param namePrefix string
+param namePrefix string = 'vrvc5'
 
 param location string = resourceGroup().location
 
@@ -108,7 +108,7 @@ resource containerApp 'Microsoft.App/containerApps@2022-03-01' = {
     configuration: {
       ingress: {
         external: true
-        targetPort: 80
+        targetPort: 3000
         allowInsecure: false
         traffic: [
           {
