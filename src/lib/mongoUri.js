@@ -1,6 +1,8 @@
 import { MongoMemoryServer } from "mongodb-memory-server";
-
+import mongoose from 'mongoose';
+mongoose.set('strictQuery', true); // or false depending on your preference
 const mongoURI = process.env.MONGODB_URI;
+
 
 if (!mongoURI) {
   if (process.env.NODE_ENV === "development") {
