@@ -12,7 +12,6 @@ const Hours = () => {
         { day: "Sunday", open: "9:00", close: "20:00" },
     ]
 
-    const prueba = "Hola Mundo"
     
     const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
     
