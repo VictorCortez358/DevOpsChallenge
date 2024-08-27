@@ -1,6 +1,7 @@
 import Link from "next/link";
 import dbConnect from "../lib/dbConnect";
 import Pet from "../models/Pet";
+import Hours from "../components/Hours"
 
 // TODO: Import Hours component
 
@@ -14,6 +15,7 @@ const Index = ({ pets }) => {
       {/* Create a card for each pet */}
       {pets.map((pet) => (
         <div key={pet._id}>
+          <Hours />
           <div className="card">
             <img src={pet.image_url} />
             <h5 className="pet-name">{pet.name}</h5>
